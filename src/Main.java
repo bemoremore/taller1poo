@@ -57,6 +57,10 @@ public class Main {
 
         while (true) {
 
+            if (StdDraw.isKeyPressed('Q')) {
+                break;
+            }
+
             if (StdDraw.isKeyPressed('W') && romboY < 0.9) {
                 romboY += 0.02;
             }
@@ -85,9 +89,8 @@ public class Main {
 
             pelotaY += velocidadY;
             pelotaX += velocidadX;
-
-            StdDraw.clear(StdDraw.BLACK);
-            //StdDraw.picture(0.5,0.5,"fondo.png",1.0);
+            StdDraw.clear();
+            StdDraw.picture(0.5,0.5,"fondo.jpeg",1.0,1.0);
 
 
             StdDraw.setPenColor(StdDraw.MAGENTA);
@@ -96,6 +99,7 @@ public class Main {
             StdDraw.setPenColor(StdDraw.CYAN);
             StdDraw.filledRectangle(romboX,romboY,0.02,0.1);
 
+            StdDraw.text(0.5,0.05,"Rebotes: " + rebotes);
             StdDraw.show();
             StdDraw.pause(20);
         }
