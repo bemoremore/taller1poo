@@ -2,7 +2,11 @@ import edu.princeton.cs.stdlib.StdDraw;
 
 import java.awt.*;
 
+/**
+ *
+ */
 public class Main {
+
     public static void main(String[] args) {
         StdDraw.setCanvasSize(800,600);
         StdDraw.setTitle("PONG");
